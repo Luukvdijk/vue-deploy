@@ -4,7 +4,7 @@
       src="../assets/underconstruction.jpg"
       alt="Page is underconstruction"
     />
-    <div class="text">This page is still under construction</div>
+    <div class="text">This page comes soon...</div>
   </div>
 </template>
 <script>
@@ -18,6 +18,7 @@ export default {};
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .text {
@@ -26,5 +27,11 @@ export default {};
 
 img {
   width: 20vw;
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 50vw;
+  }
 }
 </style>

@@ -32,12 +32,14 @@
       </div>
       <div class="projectContainer">
         <img src="../assets/golftracking-project.png" alt="Project 3" />
-        <span class="title">Golf Tracking</span>
-        <span class="subText"
-          >My third and last project of my first year was to create an app where
-          your could trace your app as a golfer to track its speed an lane in
-          the air.</span
-        >
+        <div class="projectText">
+          <span class="title">Golf Tracking</span>
+          <span class="subText"
+            >My third and last project of my first year was to create an app
+            where your could trace your app as a golfer to track its speed an
+            lane in the air.</span
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -78,6 +80,7 @@ export default {};
   border-color: black;
   border-style: solid;
   width: 20rem;
+  height: 100%;
   border-radius: 1rem;
   cursor: not-allowed;
 }
@@ -109,5 +112,20 @@ img {
   max-height: 60%;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .headerContainer {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .mainTitle {
+    font-size: 3rem;
+  }
+
+  .mainSubTitle {
+    font-size: 1.3rem;
+  }
 }
 </style>

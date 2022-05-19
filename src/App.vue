@@ -41,4 +41,18 @@ a:hover,
 a.router-link-active {
   border-bottom: 2px solid #3498db;
 }
+
+@media only screen and (max-width: 600px) {
+  .navContainer {
+    width: 100vw;
+    height: 7vh;
+  }
+}
+</style>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
 </style>

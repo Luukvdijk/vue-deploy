@@ -12,7 +12,7 @@ export default {};
 <style scoped>
 .mainContainer {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
 }
 
 .nameContainer {
@@ -31,5 +31,15 @@ export default {};
 
 #subTitle {
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #title {
+    font-size: 3rem;
+  }
+
+  #subTitle {
+    font-size: 1rem;
+  }
 }
 </style>

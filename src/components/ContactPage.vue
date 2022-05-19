@@ -163,4 +163,22 @@ img {
   width: auto;
   height: 1.2rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .headerContainer {
+    width: 80vw;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .contentContainer {
+    width: 80vw;
+  }
+
+  .nameAndMail {
+    column-gap: 2rem;
+  }
+}
 </style>

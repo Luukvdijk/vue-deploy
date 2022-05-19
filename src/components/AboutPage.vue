@@ -24,6 +24,8 @@ export default {};
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .contentContainer {
   display: flex;
@@ -42,5 +44,27 @@ export default {};
 .text {
   position: relative;
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .contentContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 3rem;
+    color: black;
+    text-shadow: none;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .textContainer {
+    width: 80vw;
+  }
 }
 </style>

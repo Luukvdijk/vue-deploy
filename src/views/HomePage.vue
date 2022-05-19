@@ -46,8 +46,7 @@ export default {
 
 .aboutContainer {
   width: 100vw;
-  height: 30vh;
-  /* background-color: whitesmoke; */
+  height: 100%;
 }
 
 .projectContainer {
