@@ -80,7 +80,7 @@ export default {};
   border-color: black;
   border-style: solid;
   width: 20rem;
-  height: 100%;
+  height: 20rem;
   border-radius: 1rem;
   cursor: not-allowed;
 }
@@ -109,7 +109,7 @@ export default {};
 
 img {
   width: 100%;
-  max-height: 60%;
+  max-height: 50%;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
