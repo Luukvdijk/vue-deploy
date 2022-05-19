@@ -7,6 +7,7 @@
       </div>
     </div>
     <div class="contentContainer">
+      <div class="overlay"></div>
       <div class="projectContainer">
         <img
           src="../assets/portefolio-project.png"
@@ -19,6 +20,14 @@
             improvements and project i do over the years.</span
           >
         </div>
+        <a
+          class="btn"
+          href="http://1810024.hu-open-ict.nl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>Visit website</p>
+        </a>
       </div>
       <div class="projectContainer">
         <img src="../assets/barber-project.svg" alt="Barber website expample" />
@@ -29,6 +38,7 @@
             could make a resevation to get a haircut.</span
           >
         </div>
+        <a class="btn"><p class="disabled">Visit website</p></a>
       </div>
       <div class="projectContainer">
         <img src="../assets/golftracking-project.png" alt="Project 3" />
@@ -40,6 +50,7 @@
             lane in the air.</span
           >
         </div>
+        <a class="btn"><p class="disabled">Visit website</p></a>
       </div>
     </div>
   </div>
@@ -76,13 +87,17 @@ export default {};
 .projectContainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   border-width: 0.1rem;
   border-color: black;
   border-style: solid;
-  width: 20rem;
-  height: 20rem;
+  width: 23rem;
+  height: 22rem;
   border-radius: 1rem;
-  cursor: not-allowed;
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 1rem;
 }
 
 .projectText {
@@ -112,6 +127,30 @@ img {
   max-height: 50%;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border-width: 0.1rem;
+  border-color: black;
+  border-style: solid;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.1rem;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+.disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
 }
 
 @media only screen and (max-width: 600px) {
