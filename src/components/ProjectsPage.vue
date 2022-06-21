@@ -16,9 +16,21 @@
         <div class="projectText">
           <span class="title">First portefolio site</span>
           <span class="subText"
-            >My first project was a portefolio site. So i can keep track of my
-            improvements and project i do over the years.</span
+            >De website waar ik ben begonnen met coderen is deze protfolio
+            website. Hier heb ik heel veel geleerd over wat coderen is hoe het
+            werkt en wat de basis inhoud. Hier leerde ik ook meer over wat ik
+            intressant vindt binnen het coderen.</span
           >
+          <div class="lgContainer">
+            <div class="lg">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML</p>
+            </div>
+            <div class="lg">
+              <i class="devicon-css3-plain colored"></i>
+              <p>CSS</p>
+            </div>
+          </div>
         </div>
         <a
           class="btn"
@@ -34,23 +46,46 @@
         <div class="projectText">
           <span class="title">Barber shop</span>
           <span class="subText"
-            >My second project was to make a site for a barber shop so costumers
-            could make a resevation to get a haircut.</span
+            >Een kappers website waar ik meer heb geleerd over samen werken in
+            een team. Maar ook meer over verschillende frameworks waarin je kan
+            coderen.</span
           >
+          <div class="lgContainer">
+            <div class="lg">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+              />
+              <p>Vue</p>
+            </div>
+            <div class="lg">
+              <i class="devicon-css3-plain colored"></i>
+              <p>CSS</p>
+            </div>
+          </div>
         </div>
-        <a class="btn"><p class="disabled">Visit website</p></a>
+        <a class="btn"><p class="disabled">Bekijk informatie</p></a>
       </div>
       <div class="projectContainer">
         <img src="../assets/golftracking-project.png" alt="Project 3" />
         <div class="projectText">
           <span class="title">Golf Tracking</span>
           <span class="subText"
-            >My third and last project of my first year was to create an app
-            where your could trace your app as a golfer to track its speed an
-            lane in the air.</span
+            >Golf tracking was het eerste project waar we met veel verschillde
+            data werkte. Ook maakte we een mobile aplicatie en geen
+            website.</span
           >
+          <div class="lgContainer">
+            <div class="lg">
+              <i class="devicon-react-original colored"></i>
+              <p>React native</p>
+            </div>
+            <div class="lg">
+              <i class="devicon-javascript-plain colored"></i>
+              <p>JavaSript</p>
+            </div>
+          </div>
         </div>
-        <a class="btn"><p class="disabled">Visit website</p></a>
+        <a class="btn"><p class="disabled">Bekijk informatie</p></a>
       </div>
     </div>
   </div>
@@ -93,7 +128,7 @@ export default {};
   border-color: black;
   border-style: solid;
   width: 23rem;
-  height: 22rem;
+  height: 27rem;
   border-radius: 1rem;
   text-decoration: none;
   color: inherit;
@@ -122,9 +157,10 @@ export default {};
   font-size: 1.5rem;
 }
 
-img {
+.projectContainer img {
   width: 100%;
   max-height: 50%;
+  object-fit: fill;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
@@ -151,6 +187,29 @@ img {
 .disabled {
   opacity: 0.2;
   cursor: not-allowed;
+}
+
+.lgContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+
+.lg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.lg img {
+  width: 32px;
+  height: 32px;
+}
+
+i {
+  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 600px) {

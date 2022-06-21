@@ -9,7 +9,7 @@
       <form>
         <div class="contentContainer">
           <div class="ownMailContainer">
-            <div class="ownMail">To: hireme@gmail.com</div>
+            <div class="ownMail">To: @luukvandijk.com</div>
             <img src="../assets/copy.png" alt="copy icon" />
           </div>
           <div class="nameAndMail">
