@@ -42,7 +42,7 @@
         </a>
       </div>
       <div class="projectContainer">
-        <img src="../assets/barber-project.svg" alt="Barber website expample" />
+        <img src="../assets/Kapper/Kapper1.png" alt="Barber website expample" />
         <div class="projectText">
           <span class="title">Barber shop</span>
           <span class="subText"
@@ -63,10 +63,10 @@
             </div>
           </div>
         </div>
-        <a class="btn"><p class="disabled">Bekijk informatie</p></a>
+        <button class="btn" @click="kapper = true">More information</button>
       </div>
       <div class="projectContainer">
-        <img src="../assets/golftracking-project.png" alt="Project 3" />
+        <img src="../assets/Golf/golftracking-project.png" alt="Project 3" />
         <div class="projectText">
           <span class="title">Golf Tracking</span>
           <span class="subText"
@@ -85,13 +85,83 @@
             </div>
           </div>
         </div>
-        <a class="btn"><p class="disabled">Bekijk informatie</p></a>
+        <button class="btn" @click="golf = true">More information</button>
+      </div>
+    </div>
+    <div v-if="golf" class="modal">
+      <div class="modalMainContainer">
+        <div class="modalTitle">Golf Tracking Simulator</div>
+        <div class="modalContainer">
+          <div class="modalImgGolf">
+            <img
+              src="../assets/Golf/golfHomePage.png"
+              alt="Homepage of the golf app"
+            />
+            <img
+              src="../assets/Golf/golfHomePage.png"
+              alt="Homepage of the golf app"
+            />
+          </div>
+          <div class="modalText">
+            The golf tracking project was a project that wasnt sure it was
+            possible. So our team was reasearing if it was evenpossible what we
+            wanted to do whit the app. We wanted to make a app for your phone so
+            that you could make a video with your phones camera and that a ai
+            would regonise the golf and give back data intermidiate golfers use.
+            <br />
+            <br />
+            This project was hard because we first needed to find out if this
+            was possible. After a lot of research we found out that it might be
+            possible so we went for it. After making the app it self we needed
+            to connect te AI and the Simulation. This would then be shown in the
+            app.
+          </div>
+        </div>
+        <div class="btn" @click="golf = false">Close</div>
+      </div>
+    </div>
+    <div v-if="kapper" class="modal">
+      <div class="modalMainContainer">
+        <div class="modalTitle">Jan de kapper</div>
+        <img
+          id="logo"
+          src="../assets/Kapper/KapperLogo.svg"
+          alt="Logo barber"
+        />
+        <div class="modalContainer">
+          <div class="modalImgBarber">
+            <img src="../assets/Kapper/Kapper2.png" alt="barber websites" />
+          </div>
+          <div class="modalText">
+            De barber shop project was the first group project i worked on. The
+            porpus of the project was to make a website for a Barber (that
+            doesn't exits). This barber wanted a way for his costumers to make a
+            reservation online. When they made that reservation the barber
+            wanted to see this reservation on a dashboard so he could accept or
+            decline the requist.
+            <br />
+            <br />
+            In this project i learnd a lot about team work and how you work as a
+            team on one project. I also learnd a lot more about how people are
+            diffrent in how they code and that coding rules are important to
+            set. Learing about more coding lanqauges and frameworks gave me also
+            another way to look at coding.
+          </div>
+        </div>
+        <div class="btn" @click="kapper = false">Close</div>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      golf: false,
+      kapper: false,
+    };
+  },
+};
 </script>
 <style scoped>
 .mainContainer {
@@ -102,6 +172,10 @@ export default {};
   background-color: whitesmoke;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.blur {
+  filter: blur(3px);
 }
 
 .headerContainer {
@@ -178,6 +252,7 @@ export default {};
   text-decoration: none;
   color: inherit;
   padding: 0.1rem;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -210,6 +285,71 @@ export default {};
 
 i {
   font-size: 1.5rem;
+}
+
+.modal {
+  position: fixed;
+  top: 5vh;
+  left: 10vw;
+  z-index: 999;
+  width: 80vw;
+  height: 90vh;
+  background-color: white;
+  border-radius: 5rem;
+}
+
+.modalMainContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 80vw;
+  margin-top: 2rem;
+  gap: 5rem;
+}
+
+.modalTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70vw;
+  gap: 1rem;
+}
+
+.modalImgBarber {
+  display: flex;
+  align-items: center;
+  max-width: 40vw;
+  height: fit-content;
+}
+
+.modalImgGolf {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50vw;
+}
+
+.modalImgGolf img {
+  max-width: 15vw;
+  height: 50vh;
+}
+
+.modalText {
+  width: 25vw;
+  height: 50vh;
+  display: flex;
+}
+
+#logo {
+  position: fixed;
+  top: 10vh;
+  left: 20vw;
+  width: 7vw;
 }
 
 @media only screen and (max-width: 600px) {
